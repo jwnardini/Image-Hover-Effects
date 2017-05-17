@@ -1,0 +1,27 @@
+<?php
+/**
+ * @file
+ * Code for the Image Hover Effects feature.
+ */
+
+include_once 'image_hover_effects.features.inc';
+
+/**
+ * Implements hook_theme().
+ */
+function image_hover_effects_theme($existing, $type, $theme, $path) {
+  $theme = array();
+  $theme['node__hover_effect_image'] = array(
+    'render element' => 'content',
+    'base hook' => 'node',
+    'template' => 'node--hover_effect_image',
+    'path' => drupal_get_path('module', 'image_hover_effects') . '/templates',
+   );
+   $theme['field__field_single_collection_image'] = array(
+     'render element' => 'content',
+     'base hook' => 'node',
+     'template' => 'field--field_single_collection_image',
+     'path' => drupal_get_path('module', 'image_hover_effects') . '/templates',
+    );
+  return $theme;
+}
