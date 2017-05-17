@@ -28,3 +28,5 @@
 #### Features
 #### Field formatter CSS class
 #### Link 
+
+# Make templates happy! Clear your drupal cache after installing!
