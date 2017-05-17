@@ -1,6 +1,6 @@
 # Image-Hover-Effects
 
-#### This module creates a content type "Hover Effect Image"
+#### This D7 module creates a content type "Hover Effect Image"
 
 ### Noteworthy fields:
 
@@ -22,3 +22,9 @@
 ###### - Optional target="_blank"
 #### Units 
 ###### - Measurement unit for Collection Image Width/Height. Options: %, px, em
+
+
+### REQUIRES:
+#### Features
+#### Field formatter CSS class
+#### Link 
