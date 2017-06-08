@@ -89,7 +89,7 @@ $collectionImages = render($content['field_single_collection_image']);
 $imageTitleColor = $content['field_link_color']['#items'][0]['value'];
 ?>
 
-<div class="hover-grid">
+<div class="grid">
 	<figure class="<?php echo $figureClass?>">
 			<?php print $mainImage; ?>
 	  <figcaption>
