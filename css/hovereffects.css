@@ -1,5 +1,97 @@
-/*HOVER EFFECTS*/
+@font-face {
+	font-weight: normal;
+	font-style: normal;
+	font-family: 'feathericons';
+	src:url('../fonts/feathericons/feathericons.eot?-8is7zf');
+	src:url('../fonts/feathericons/feathericons.eot?#iefix-8is7zf') format('embedded-opentype'),
+		url('../fonts/feathericons/feathericons.woff?-8is7zf') format('woff'),
+		url('../fonts/feathericons/feathericons.ttf?-8is7zf') format('truetype'),
+		url('../fonts/feathericons/feathericons.svg?-8is7zf#feathericons') format('svg');
+}
 
+.grid-hover {
+	/* position: relative; */
+	/* margin: 0 auto; */
+	/* padding: 1em 0 4em; */
+	/* max-width: 1000px; */
+	/* list-style: none; */
+	/* text-align: center; */
+}
+
+/* Common style */
+.grid-hover figure {
+	position: relative;
+	float: left;
+	overflow: hidden;
+	/* margin: 10px 1%; */
+	/* min-width: 320px; */
+	/* max-width: 480px; */
+	/* max-height: 360px; */
+	/* width: 48%; */
+	/* background: #3085a3; */
+	/* text-align: center; */
+	/* cursor: pointer; */
+}
+
+.grid-hover figure img {
+	position: relative;
+	display: block;
+	min-height: 100%;
+	max-width: 100%;
+	opacity: 0.8;
+}
+
+.grid-hover figure figcaption {
+	padding: 2em;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.grid-hover figure figcaption::before,
+.grid-hover figure figcaption::after {
+	pointer-events: none;
+}
+
+.grid-hover figure figcaption,
+.grid-hover figure figcaption > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.grid-hover figure figcaption > a {
+	z-index: 1000;
+	text-indent: 200%;
+	white-space: nowrap;
+	font-size: 0;
+	opacity: 0;
+}
+
+.grid-hover figure h2 {
+	word-spacing: -0.15em;
+	font-weight: 300;
+}
+
+.grid-hover figure h2 span {
+	font-weight: 800;
+}
+
+.grid-hover figure h2,
+.grid-hover figure p {
+	margin: 0;
+}
+
+.grid-hover figure p {
+	letter-spacing: 1px;
+	font-size: 68.5%;
+}
 
 /* Individual effects */
 
@@ -7,9 +99,8 @@
 /***** Lily *****/
 /*---------------*/
 
-figure.effect-lily  > .field > .field-items > .field-item > img {
-	max-width: 100%;
-  height:auto;
+figure.effect-lily img {
+	max-width: none;
 	width: -webkit-calc(100% + 50px);
 	width: calc(100% + 50px);
 	opacity: 0.7;
@@ -17,9 +108,6 @@ figure.effect-lily  > .field > .field-items > .field-item > img {
 	transition: opacity 0.35s, transform 0.35s;
 	-webkit-transform: translate3d(-40px,0, 0);
 	transform: translate3d(-40px,0,0);
-}
-figure.effect-lily  > .field > .field-items > .field-item {
-  overflow: hidden;
 }
 
 figure.effect-lily figcaption {
@@ -29,42 +117,43 @@ figure.effect-lily figcaption {
 figure.effect-lily figcaption > div {
 	position: absolute;
 	bottom: 0;
+	left: 0;
 	padding: 2em;
 	width: 100%;
 	height: 50%;
 }
 
-figure.effect-lily figcaption h2,
-figure.effect-lily figcaption p {
+figure.effect-lily h2,
+figure.effect-lily p {
 	-webkit-transform: translate3d(0,40px,0);
 	transform: translate3d(0,40px,0);
 }
 
-figure.effect-lily figcaption h2 {
+figure.effect-lily h2 {
 	-webkit-transition: -webkit-transform 0.35s;
 	transition: transform 0.35s;
 }
 
-figure.effect-lily figcaption p {
+figure.effect-lily p {
 	color: rgba(255,255,255,0.8);
 	opacity: 0;
 	-webkit-transition: opacity 0.2s, -webkit-transform 0.35s;
 	transition: opacity 0.2s, transform 0.35s;
 }
 
-figure.effect-lily:hover > .field > .field-items > .field-item > img,
-figure.effect-lily:hover figcaption p {
+figure.effect-lily:hover img,
+figure.effect-lily:hover p {
 	opacity: 1;
 }
 
-figure.effect-lily:hover  > .field > .field-items > .field-item > img,
-figure.effect-lily:hover figcaption h2,
-figure.effect-lily:hover figcaption p {
+figure.effect-lily:hover img,
+figure.effect-lily:hover h2,
+figure.effect-lily:hover p {
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
 }
 
-figure.effect-lily:hover figcaption p {
+figure.effect-lily:hover p {
 	-webkit-transition-delay: 0.05s;
 	transition-delay: 0.05s;
 	-webkit-transition-duration: 0.35s;
@@ -89,7 +178,7 @@ figure.effect-sadie figcaption::before {
 	transform: translate3d(0,50%,0);
 }
 
-figure.effect-sadie figcaption h2 {
+figure.effect-sadie h2 {
 	position: absolute;
 	top: 50%;
 	left: 0;
@@ -102,12 +191,12 @@ figure.effect-sadie figcaption h2 {
 }
 
 figure.effect-sadie figcaption::before,
-figure.effect-sadie figcaption p {
+figure.effect-sadie p {
 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
 	transition: opacity 0.35s, transform 0.35s;
 }
 
-figure.effect-sadie figcaption p {
+figure.effect-sadie p {
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -118,14 +207,14 @@ figure.effect-sadie figcaption p {
 	transform: translate3d(0,10px,0);
 }
 
-figure.effect-sadie:hover figcaption h2 {
+figure.effect-sadie:hover h2 {
 	color: #fff;
 	-webkit-transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
 	transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
 }
 
 figure.effect-sadie:hover figcaption::before ,
-figure.effect-sadie:hover figcaption p {
+figure.effect-sadie:hover p {
 	opacity: 1;
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
@@ -140,7 +229,7 @@ figure.effect-roxy {
 	background: linear-gradient(45deg, #ff89e9 0%,#05abe0 100%);
 }
 
-figure.effect-roxy > .field > .field-items > .field-item > img {
+figure.effect-roxy img {
 	max-width: none;
 	width: -webkit-calc(100% + 60px);
 	width: calc(100% + 60px);
@@ -170,11 +259,11 @@ figure.effect-roxy figcaption {
 	text-align: left;
 }
 
-figure.effect-roxy figcaption h2 {
+figure.effect-roxy h2 {
 	padding: 30% 0 10px 0;
 }
 
-figure.effect-roxy figcaption p {
+figure.effect-roxy p {
 	opacity: 0;
 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
 	transition: opacity 0.35s, transform 0.35s;
@@ -182,14 +271,14 @@ figure.effect-roxy figcaption p {
 	transform: translate3d(-10px,0,0);
 }
 
-figure.effect-roxy:hover > .field > .field-items > .field-item > img {
+figure.effect-roxy:hover img {
 	opacity: 0.7;
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
 }
 
 figure.effect-roxy:hover figcaption::before,
-figure.effect-roxy:hover figcaption p {
+figure.effect-roxy:hover p {
 	opacity: 1;
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
@@ -203,13 +292,13 @@ figure.effect-bubba {
 	background: #9e5406;
 }
 
-figure.effect-bubba > .field > .field-items > .field-item > img {
+figure.effect-bubba img {
 	opacity: 0.7;
 	-webkit-transition: opacity 0.35s;
 	transition: opacity 0.35s;
 }
 
-figure.effect-bubba:hover > .field > .field-items > .field-item > img {
+figure.effect-bubba:hover img {
 	opacity: 0.4;
 }
 
@@ -240,7 +329,7 @@ figure.effect-bubba figcaption::after {
 	transform: scale(1,0);
 }
 
-figure.effect-bubba figcaption h2 {
+figure.effect-bubba h2 {
 	padding-top: 30%;
 	-webkit-transition: -webkit-transform 0.35s;
 	transition: transform 0.35s;
@@ -248,7 +337,7 @@ figure.effect-bubba figcaption h2 {
 	transform: translate3d(0,-20px,0);
 }
 
-figure.effect-bubba figcaption p {
+figure.effect-bubba p {
 	padding: 20px 2.5em;
 	opacity: 0;
 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
@@ -264,8 +353,8 @@ figure.effect-bubba:hover figcaption::after {
 	transform: scale(1);
 }
 
-figure.effect-bubba:hover figcaption h2,
-figure.effect-bubba:hover figcaption p {
+figure.effect-bubba:hover h2,
+figure.effect-bubba:hover p {
 	opacity: 1;
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
@@ -280,16 +369,14 @@ figure.effect-romeo {
 	perspective: 1000px;
 }
 
-figure.effect-romeo > .field > .field-items > .field-item > img {
+figure.effect-romeo img {
 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
 	transition: opacity 0.35s, transform 0.35s;
-	/*-webkit-transform: translate3d(0,0,300px);
-	transform: translate3d(0,0,300px);*/
-  width:100%;
-  height: auto;
+	-webkit-transform: translate3d(0,0,300px);
+	transform: translate3d(0,0,300px);
 }
 
-figure.effect-romeo:hover > .field > .field-items > .field-item > figcaption img {
+figure.effect-romeo:hover img {
 	opacity: 0.6;
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
@@ -322,8 +409,8 @@ figure.effect-romeo:hover figcaption::after {
 	transform: translate3d(-50%,-50%,0) rotate(-45deg);
 }
 
-figure.effect-romeo figcaption h2,
-figure.effect-romeo figcaption p {
+figure.effect-romeo h2,
+figure.effect-romeo p {
 	position: absolute;
 	top: 50%;
 	left: 0;
@@ -332,24 +419,23 @@ figure.effect-romeo figcaption p {
 	transition: transform 0.35s;
 }
 
-figure.effect-romeo figcaption h2 {
+figure.effect-romeo h2 {
 	-webkit-transform: translate3d(0,-50%,0) translate3d(0,-150%,0);
 	transform: translate3d(0,-50%,0) translate3d(0,-150%,0);
-  margin-left: 1%;
 }
 
-figure.effect-romeo figcaption p {
+figure.effect-romeo p {
 	padding: 0.25em 2em;
 	-webkit-transform: translate3d(0,-50%,0) translate3d(0,150%,0);
 	transform: translate3d(0,-50%,0) translate3d(0,150%,0);
 }
 
-figure.effect-romeo:hover figcaption h2 {
+figure.effect-romeo:hover h2 {
 	-webkit-transform: translate3d(0,-50%,0) translate3d(0,-100%,0);
 	transform: translate3d(0,-50%,0) translate3d(0,-100%,0);
 }
 
-figure.effect-romeo:hover figcaption p {
+figure.effect-romeo:hover p {
 	-webkit-transform: translate3d(0,-50%,0) translate3d(0,100%,0);
 	transform: translate3d(0,-50%,0) translate3d(0,100%,0);
 }
@@ -362,12 +448,12 @@ figure.effect-layla {
 	background: #18a367;
 }
 
-figure.effect-layla > .field > .field-items > .field-item > img {
-	/*height: 390px;*/
+figure.effect-layla img {
+	height: 390px;
 }
 
 figure.effect-layla figcaption {
-	/*padding: 3em;*/
+	padding: 3em;
 }
 
 figure.effect-layla figcaption::before,
@@ -403,13 +489,13 @@ figure.effect-layla figcaption::after {
 	transform-origin: 100% 0;
 }
 
-figure.effect-layla figcaption h2 {
-	/*padding-top: 26%;*/
+figure.effect-layla h2 {
+	padding-top: 26%;
 	-webkit-transition: -webkit-transform 0.35s;
 	transition: transform 0.35s;
 }
 
-figure.effect-layla figcaption p {
+figure.effect-layla p {
 	padding: 0.5em 2em;
 	text-transform: none;
 	opacity: 0;
@@ -417,21 +503,21 @@ figure.effect-layla figcaption p {
 	transform: translate3d(0,-10px,0);
 }
 
-figure.effect-layla figcaption img,
-figure.effect-layla figcaption h2 {
+figure.effect-layla img,
+figure.effect-layla h2 {
 	-webkit-transform: translate3d(0,-30px,0);
 	transform: translate3d(0,-30px,0);
 }
 
-figure.effect-layla > .field > .field-items > .field-item > img,
+figure.effect-layla img,
 figure.effect-layla figcaption::before,
 figure.effect-layla figcaption::after,
-figure.effect-layla figcaption p {
+figure.effect-layla p {
 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
 	transition: opacity 0.35s, transform 0.35s;
 }
 
-figure.effect-layla:hover > .field > .field-items > .field-item > img {
+figure.effect-layla:hover img {
 	opacity: 0.7;
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
@@ -444,17 +530,17 @@ figure.effect-layla:hover figcaption::after {
 	transform: scale(1);
 }
 
-figure.effect-layla:hover figcaption h2,
-figure.effect-layla:hover figcaption p {
+figure.effect-layla:hover h2,
+figure.effect-layla:hover p {
 	opacity: 1;
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
 }
 
 figure.effect-layla:hover figcaption::after,
-figure.effect-layla:hover figcaption h2,
-figure.effect-layla:hover figcaption p,
-figure.effect-layla:hover > .field > .field-items > .field-item > img {
+figure.effect-layla:hover h2,
+figure.effect-layla:hover p,
+figure.effect-layla:hover img {
 	-webkit-transition-delay: 0.15s;
 	transition-delay: 0.15s;
 }
@@ -466,19 +552,14 @@ figure.effect-layla:hover > .field > .field-items > .field-item > img {
 figure.effect-honey {
 	background: #4a3753;
 }
-figure.effect-honey figcaption p {
-  position: absolute;
-  bottom:0%;
-}
-figure.effect-honey > .field > .field-items > .field-item > img {
+
+figure.effect-honey img {
 	opacity: 0.9;
 	-webkit-transition: opacity 0.35s;
 	transition: opacity 0.35s;
-  width: 100%;
-  height: auto;
 }
 
-figure.effect-honey:hover > .field > .field-items > .field-item > img {
+figure.effect-honey:hover img {
 	opacity: 0.5;
 }
 
@@ -494,19 +575,18 @@ figure.effect-honey figcaption::before {
 	transform: translate3d(0,10px,0);
 }
 
-figure.effect-honey figcaption h2 {
+figure.effect-honey h2 {
 	position: absolute;
-	bottom: 5%;
-  margin-left:1%;
-	/*left: 0;*/
-	/*padding: 1em 1.5em;*/
+	bottom: 0;
+	left: 0;
+	padding: 1em 1.5em;
 	width: 100%;
 	text-align: left;
 	-webkit-transform: translate3d(0,-30px,0);
 	transform: translate3d(0,-30px,0);
 }
 
-figure.effect-honey figcaption h2 i {
+figure.effect-honey h2 i {
 	font-style: normal;
 	opacity: 0;
 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
@@ -516,26 +596,17 @@ figure.effect-honey figcaption h2 i {
 }
 
 figure.effect-honey figcaption::before,
-figure.effect-honey figcaption h2 {
+figure.effect-honey h2 {
 	-webkit-transition: -webkit-transform 0.35s;
 	transition: transform 0.35s;
 }
 
 figure.effect-honey:hover figcaption::before,
-figure.effect-honey:hover figcaption h2,
-figure.effect-honey:hover figcaption h2 i {
+figure.effect-honey:hover h2,
+figure.effect-honey:hover h2 i {
 	opacity: 1;
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
-}
-
-figure.effect-honey figcaption p {
-  opacity: 0;
-  transition: opacity 0.35s;
-  margin-left: 1%;
-}
-figure.effect-honey:hover figcaption p {
-  opacity: 1;
 }
 
 /*---------------*/
@@ -547,20 +618,14 @@ figure.effect-oscar {
 	background: linear-gradient(45deg, #22682a 0%,#9b4a1b 40%,#3a342a 100%);
 }
 
-figure.effect-oscar > .field > .field-items > .field-item > img {
+figure.effect-oscar img {
 	opacity: 0.9;
 	-webkit-transition: opacity 0.35s;
 	transition: opacity 0.35s;
-  width:100%;
-  height:auto;
-}
-
-figure.effect-oscar .field {
-  margin:0;
 }
 
 figure.effect-oscar figcaption {
-	padding: 1em;
+	padding: 3em;
 	background-color: rgba(58,52,42,0.7);
 	-webkit-transition: background-color 0.35s;
 	transition: background-color 0.35s;
@@ -576,8 +641,8 @@ figure.effect-oscar figcaption::before {
 	content: '';
 }
 
-figure.effect-oscar figcaption h2 {
-	margin: 0 0 10px 0;
+figure.effect-oscar h2 {
+	margin: 20% 0 10px 0;
 	-webkit-transition: -webkit-transform 0.35s;
 	transition: transform 0.35s;
 	-webkit-transform: translate3d(0,100%,0);
@@ -585,7 +650,7 @@ figure.effect-oscar figcaption h2 {
 }
 
 figure.effect-oscar figcaption::before,
-figure.effect-oscar figcaption p {
+figure.effect-oscar p {
 	opacity: 0;
 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
 	transition: opacity 0.35s, transform 0.35s;
@@ -593,13 +658,13 @@ figure.effect-oscar figcaption p {
 	transform: scale(0);
 }
 
-figure.effect-oscar:hover figcaption h2 {
+figure.effect-oscar:hover h2 {
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
 }
 
 figure.effect-oscar:hover figcaption::before,
-figure.effect-oscar:hover figcaption p {
+figure.effect-oscar:hover p {
 	opacity: 1;
 	-webkit-transform: scale(1);
 	transform: scale(1);
@@ -609,7 +674,7 @@ figure.effect-oscar:hover figcaption {
 	background-color: rgba(58,52,42,0);
 }
 
-figure.effect-oscar:hover > .field > .field-items > .field-item > img {
+figure.effect-oscar:hover img {
 	opacity: 0.4;
 }
 
@@ -624,21 +689,21 @@ figure.effect-marley figcaption {
 figure.effect-marley h2,
 figure.effect-marley p {
 	position: absolute;
-	/*right: 30px;
-	left: 30px;*/
+	right: 30px;
+	left: 30px;
 	padding: 10px 0;
 }
 
 
 figure.effect-marley p {
-	/*bottom: 30px;*/
+	bottom: 30px;
 	line-height: 1.5;
 	-webkit-transform: translate3d(0,100%,0);
 	transform: translate3d(0,100%,0);
 }
 
 figure.effect-marley h2 {
-	/*top: 30px;*/
+	top: 30px;
 	-webkit-transition: -webkit-transform 0.35s;
 	transition: transform 0.35s;
 	-webkit-transform: translate3d(0,20px,0);
@@ -682,12 +747,9 @@ figure.effect-marley:hover p {
 
 figure.effect-ruby {
 	background-color: #17819c;
-  overflow:hidden;
 }
 
-figure.effect-ruby > .field > .field-items > .field-item > img {
-  width:100%;
-  height:auto;
+figure.effect-ruby img {
 	opacity: 0.7;
 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
 	transition: opacity 0.35s, transform 0.35s;
@@ -695,21 +757,21 @@ figure.effect-ruby > .field > .field-items > .field-item > img {
 	transform: scale(1.15);
 }
 
-figure.effect-ruby:hover > .field > .field-items > .field-item > img {
+figure.effect-ruby:hover img {
 	opacity: 0.5;
 	-webkit-transform: scale(1);
 	transform: scale(1);
 }
 
-figure.effect-ruby figcaption h2 {
-	/*margin-top: 20%;*/
+figure.effect-ruby h2 {
+	margin-top: 20%;
 	-webkit-transition: -webkit-transform 0.35s;
 	transition: transform 0.35s;
 	-webkit-transform: translate3d(0,20px,0);
 	transform: translate3d(0,20px,0);
 }
 
-figure.effect-ruby figcaption p {
+figure.effect-ruby p {
 	margin: 1em 0 0;
 	padding: 3em;
 	border: 1px solid #fff;
@@ -718,14 +780,14 @@ figure.effect-ruby figcaption p {
 	transition: opacity 0.35s, transform 0.35s;
 	-webkit-transform: translate3d(0,20px,0) scale(1.1);
 	transform: translate3d(0,20px,0) scale(1.1);
-}
+} 
 
-figure.effect-ruby:hover figcaption h2 {
+figure.effect-ruby:hover h2 {
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
 }
 
-figure.effect-ruby:hover figcaption p {
+figure.effect-ruby:hover p {
 	opacity: 1;
 	-webkit-transform: translate3d(0,0,0) scale(1);
 	transform: translate3d(0,0,0) scale(1);
@@ -737,14 +799,12 @@ figure.effect-ruby:hover figcaption p {
 
 figure.effect-milo {
 	background: #2e5d5a;
-  overflow: hidden;
 }
 
-figure.effect-milo > .field > .field-items > .field-item > img {
-	width:100%;
-  height:auto;
-	/*width: -webkit-calc(100% + 60px);
-	width: calc(100% + 60px);*/
+figure.effect-milo img {
+	max-width: none;
+	width: -webkit-calc(100% + 60px);
+	width: calc(100% + 60px);
 	opacity: 1;
 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
 	transition: opacity 0.35s, transform 0.35s;
@@ -754,22 +814,23 @@ figure.effect-milo > .field > .field-items > .field-item > img {
 	backface-visibility: hidden;
 }
 
-figure.effect-milo:hover > .field > .field-items > .field-item > img {
+figure.effect-milo:hover img {
 	opacity: 0.5;
 	-webkit-transform: translate3d(0,0,0) scale(1);
 	transform: translate3d(0,0,0) scale(1);
 }
 
-figure.effect-milo figcaption h2 {
+figure.effect-milo h2 {
 	position: absolute;
-	right: 18%;
+	right: 0;
 	bottom: 0;
 	padding: 1em 1.2em;
 }
 
-figure.effect-milo figcaption p {
+figure.effect-milo p {
 	padding: 0 10px 0 0;
 	width: 50%;
+	border-right: 1px solid #fff;
 	text-align: right;
 	opacity: 0;
 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
@@ -778,7 +839,7 @@ figure.effect-milo figcaption p {
 	transform: translate3d(-40px,0,0);
 }
 
-figure.effect-milo:hover figcaption p {
+figure.effect-milo:hover p {
 	opacity: 1;
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
@@ -790,29 +851,25 @@ figure.effect-milo:hover figcaption p {
 
 figure.effect-dexter {
 	background: -webkit-linear-gradient(top, rgba(37,141,200,1) 0%, rgba(104,60,19,1) 100%);
-	background: linear-gradient(to bottom, rgba(37,141,200,1) 0%,rgba(104,60,19,1) 100%);
+	background: linear-gradient(to bottom, rgba(37,141,200,1) 0%,rgba(104,60,19,1) 100%); 
 }
 
-figure.effect-dexter > .field > .field-items > .field-item > img {
+figure.effect-dexter img {
 	-webkit-transition: opacity 0.35s;
 	transition: opacity 0.35s;
-  width:100%;
-  height:auto;
 }
 
-figure.effect-dexter:hover > .field > .field-items > .field-item > img {
+figure.effect-dexter:hover img {
 	opacity: 0.4;
 }
 
 figure.effect-dexter figcaption::after {
 	position: absolute;
-	right: 20%;
-	top: 45%;
-	left: 20%;
-  z-index:0;
-	/*height: -webkit-calc(50% - 30px);
-	height: calc(50% - 30px);*/
-  height: 20%;
+	right: 30px;
+	bottom: 30px;
+	left: 30px;
+	height: -webkit-calc(50% - 30px);
+	height: calc(50% - 30px);
 	border: 7px solid #fff;
 	content: '';
 	-webkit-transition: -webkit-transform 0.35s;
@@ -831,21 +888,11 @@ figure.effect-dexter figcaption {
 	text-align: left;
 }
 
-
-
-figure.effect-dexter figcaption p {
+figure.effect-dexter p {
 	position: absolute;
-	bottom: 36%;
-	opacity: 0;
-  z-index:1;
-	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-	transition: opacity 0.35s, transform 0.35s;
-	-webkit-transform: translate3d(0,-100px,0);
-	transform: translate3d(0,-100px,0);
-}
-figure.effect-dexter figcaption h2 {
-	position: absolute;
-	bottom: 40%;
+	right: 60px;
+	bottom: 60px;
+	left: 60px;
 	opacity: 0;
 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
 	transition: opacity 0.35s, transform 0.35s;
@@ -853,18 +900,11 @@ figure.effect-dexter figcaption h2 {
 	transform: translate3d(0,-100px,0);
 }
 
-figure.effect-dexter:hover figcaption p {
+figure.effect-dexter:hover p {
 	opacity: 1;
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
 }
-
-figure.effect-dexter:hover figcaption h2 {
-	opacity: 1;
-	-webkit-transform: translate3d(0,0,0);
-	transform: translate3d(0,0,0);
-}
-
 
 /*---------------*/
 /***** Sarah *****/
@@ -872,16 +912,12 @@ figure.effect-dexter:hover figcaption h2 {
 
 figure.effect-sarah {
 	background: #42b078;
-  overflow:hidden;
 }
 
-figure.effect-sarah .field {
-  margin: -1px -9px;
-}
-
-figure.effect-sarah > .field > .field-items > .field-item > img {
-	width:100%;
-  height:auto;
+figure.effect-sarah img {
+	max-width: none;
+	width: -webkit-calc(100% + 20px);
+	width: calc(100% + 20px);
 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
 	transition: opacity 0.35s, transform 0.35s;
 	-webkit-transform: translate3d(-10px,0,0);
@@ -890,7 +926,7 @@ figure.effect-sarah > .field > .field-items > .field-item > img {
 	backface-visibility: hidden;
 }
 
-figure.effect-sarah:hover > .field > .field-items > .field-item > img{
+figure.effect-sarah:hover img {
 	opacity: 0.4;
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
@@ -898,17 +934,15 @@ figure.effect-sarah:hover > .field > .field-items > .field-item > img{
 
 figure.effect-sarah figcaption {
 	text-align: left;
-  position: absolute;
-  bottom:0%;
 }
 
-figure.effect-sarah figcaption h2 {
+figure.effect-sarah h2 {
 	position: relative;
 	overflow: hidden;
 	padding: 0.5em 0;
 }
 
-figure.effect-sarah figcaption h2::after {
+figure.effect-sarah h2::after {
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -922,12 +956,12 @@ figure.effect-sarah figcaption h2::after {
 	transform: translate3d(-100%,0,0);
 }
 
-figure.effect-sarah:hover figcaption h2::after {
+figure.effect-sarah:hover h2::after {
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
 }
 
-figure.effect-sarah figcaption p {
+figure.effect-sarah p {
 	padding: 1em 0;
 	opacity: 0;
 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
@@ -936,7 +970,7 @@ figure.effect-sarah figcaption p {
 	transform: translate3d(100%,0,0);
 }
 
-figure.effect-sarah:hover figcaption p {
+figure.effect-sarah:hover p {
 	opacity: 1;
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
@@ -947,29 +981,30 @@ figure.effect-sarah:hover figcaption p {
 /*---------------*/
 
 figure.effect-zoe figcaption {
-	bottom: 33%;
+	top: auto;
+	bottom: 0;
 	padding: 1em;
 	height: 3.75em;
+	background: #fff;
 	color: #3c4a50;
 	-webkit-transition: -webkit-transform 0.35s;
 	transition: transform 0.35s;
 	-webkit-transform: translate3d(0,100%,0);
 	transform: translate3d(0,100%,0);
-  position: absolute;
 }
 
-figure.effect-zoe figcaption h2 {
+figure.effect-zoe h2 {
 	float: left;
 }
 
-figure.effect-zoe figcaption p a {
+figure.effect-zoe p.icon-links a {
 	float: right;
 	color: #3c4a50;
 	font-size: 1.4em;
 }
 
-figure.effect-zoe:hover figcaption p a:hover,
-figure.effect-zoe:hover figcaption p a:focus {
+figure.effect-zoe:hover p.icon-links a:hover,
+figure.effect-zoe:hover p.icon-links a:focus {
 	color: #252d31;
 }
 
@@ -987,24 +1022,20 @@ figure.effect-zoe p.description {
 }
 
 figure.effect-zoe h2,
-figure.effect-zoe figcaption p a {
+figure.effect-zoe p.icon-links a {
 	-webkit-transition: -webkit-transform 0.35s;
 	transition: transform 0.35s;
 	-webkit-transform: translate3d(0,200%,0);
 	transform: translate3d(0,200%,0);
 }
 
-figure.effect-zoe figcaption p a span::before {
+figure.effect-zoe p.icon-links a span::before {
 	display: inline-block;
 	padding: 8px 10px;
 	font-family: 'feathericons';
 	speak: none;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-}
-figure.effect-zoe .field--featured-image .field-items .field-item img {
-  width: 100%;
-  height: 100%;
 }
 
 .icon-eye::before {
@@ -1028,28 +1059,28 @@ figure.effect-zoe:hover p.description {
 }
 
 figure.effect-zoe:hover figcaption,
-figure.effect-zoe:hover figcaption h2,
-figure.effect-zoe:hover figcaption p a {
+figure.effect-zoe:hover h2,
+figure.effect-zoe:hover p.icon-links a {
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
 }
 
-figure.effect-zoe:hover figcaption h2 {
+figure.effect-zoe:hover h2 {
 	-webkit-transition-delay: 0.05s;
 	transition-delay: 0.05s;
 }
 
-figure.effect-zoe:hover figcaption p a:nth-child(3) {
+figure.effect-zoe:hover p.icon-links a:nth-child(3) {
 	-webkit-transition-delay: 0.1s;
 	transition-delay: 0.1s;
 }
 
-figure.effect-zoe:hover figcaption p a:nth-child(2) {
+figure.effect-zoe:hover p.icon-links a:nth-child(2) {
 	-webkit-transition-delay: 0.15s;
 	transition-delay: 0.15s;
 }
 
-figure.effect-zoe:hover figcaption p a:first-child {
+figure.effect-zoe:hover p.icon-links a:first-child {
 	-webkit-transition-delay: 0.2s;
 	transition-delay: 0.2s;
 }
@@ -1058,16 +1089,14 @@ figure.effect-zoe:hover figcaption p a:first-child {
 /***** Chico *****/
 /*---------------*/
 
-figure.effect-chico > .field > .field-items > .field-item > img {
+figure.effect-chico img {
 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
 	transition: opacity 0.35s, transform 0.35s;
 	-webkit-transform: scale(1.12);
 	transform: scale(1.12);
-  width:100%;
-  height:100%;
 }
 
-figure.effect-chico:hover > .field > .field-items > .field-item > img {
+figure.effect-chico:hover img {
 	opacity: 0.5;
 	-webkit-transform: scale(1);
 	transform: scale(1);
@@ -1075,32 +1104,32 @@ figure.effect-chico:hover > .field > .field-items > .field-item > img {
 
 figure.effect-chico figcaption {
 	padding: 3em;
-  position: absolute;
-  bottom:0%;
 }
 
 figure.effect-chico figcaption::before {
-	top: 10px;
-	right: 10px;
-	bottom: 10px;
-	left: 10px;
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	bottom: 30px;
+	left: 30px;
+	border: 1px solid #fff;
 	content: '';
 	-webkit-transform: scale(1.1);
 	transform: scale(1.1);
 }
 
 figure.effect-chico figcaption::before,
-figure.effect-chico figcaption p {
+figure.effect-chico p {
 	opacity: 0;
 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
 	transition: opacity 0.35s, transform 0.35s;
 }
 
-figure.effect-chico figcaption h2 {
+figure.effect-chico h2 {
 	padding: 20% 0 20px 0;
 }
 
-figure.effect-chico figcaption p {
+figure.effect-chico p {
 	margin: 0 auto;
 	max-width: 200px;
 	-webkit-transform: scale(1.5);
@@ -1108,8 +1137,21 @@ figure.effect-chico figcaption p {
 }
 
 figure.effect-chico:hover figcaption::before,
-figure.effect-chico:hover figcaption p {
+figure.effect-chico:hover p {
 	opacity: 1;
 	-webkit-transform: scale(1);
 	transform: scale(1);
+}
+
+@media screen and (max-width: 50em) {
+	.content {
+		padding: 0 10px;
+		text-align: center;
+	}
+	.grid-hover figure {
+		display: inline-block;
+		float: none;
+		margin: 10px auto;
+		width: 100%;
+	}
 }
