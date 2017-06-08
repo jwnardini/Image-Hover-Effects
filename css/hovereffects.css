@@ -1,236 +1,5 @@
-/*SVG CUSTOMS*/
-/*ALL SVGs*/
-use {
-  fill: red;
-}
-use:hover {
-  fill: SteelBlue;
-}
 
-#amazon-a:hover{
-  fill: #dddddd;
-}
-#amazon-arrow-point:hover{
-  fill: #dddddd;
-}
-#amazon-line:hover{
-  fill: #dddddd;
-}
-
-#man-woman-svg-id {
-  width: 180px;
-  height: 180px;
-  padding: 10px;
-  background-color:#DDDDDD;
-}
-#man-woman-svg-id:hover {
-  background-color:black;
-}
-
-#man-woman-svg-id-2{
-  width: 180px;
-  height: 180px;
-  padding: 10px;
-  background-color: #CCFFFF;
-}
-.use {
-  fill: #77FF77;
-}
-#man-woman-svg-id-2:hover{
-  background-color: #FFCCFF;
-}
-#man-woman-svg-id-2:hover .use{
-  fill: #FFFFCC;
-}
-/*Non-compartmentalized library*/
-.library {
-  fill: pink;
-}
-.library:hover {
-  fill: purple;
-}
-
-
-/*These seem like they should work, but won't! It's like trying to target a DOM element of a DOM element*/
-#library-pillars {
-  fill: cyan;
-}
-#library-roof {
-  fill: magenta;
-}
-
-.library #library-pillars {
-  fill: cyan;
-}
-.library #library-roof {
-  fill: magenta;
-}
-
-
-/*Compartmentalized library*/
-.pillars {
-  fill: green;
-}
-.pillars:hover {
-  fill: yellow;
-}
-.roof {
-  fill: blue;
-}
-.roof:hover {
-  fill: orange;
-}
-
-/*Animation example*/
-.roof-animated {
-  fill: blue;
-  transform-origin: center center;
-  animation: doRotateRoof 10s infinite linear;
-}
-.pillars-animated {
-  fill: green;
-  transform-origin: center center;
-  animation: doRotatePillars 5s infinite linear;
-}
-
-@keyframes doRotateRoof {
-  to {
-    transform: rotate(360deg);
-  }
-}
-@keyframes doRotatePillars {
-  to {
-    transform: rotate(-360deg);
-  }
-}
-@keyframes doRotateManWoman {
-  to {
-    transform: rotate(-360deg);
-  }
-}
-
-#man-woman-svg-id-3{
-  width: 180px;
-  height: 180px;
-  padding: 10px;
-  background-color: #CCFFFF;
-}
-.use {
-  fill: #77FF77;
-}
-#man-woman-svg-id-3:hover{
-  background-color: #FFCCFF;
-}
-#man-woman-svg-id-3:hover .use{
-  fill: #FFFFCC;
-  transform-origin: center center;
-  animation: doRotateManWoman 5s infinite linear;
-}
-
-pre {
-  background-color: #EEEEEE;
-  width: 100%;
-  font-size: 20px;
-}
-
-
-/*FIELD FORMATTER*/
-
-.green {
-  background-color:green;
-}
-.blue {
-  background-color:blue;
-}
-.red {
-  background-color:red;
-}
-.purple {
-  background-color:purple;
-}
-
-#tv-test {
-  fill:red;
-}
-
-
-#svg-css-background {
-  display: block;
-  text-indent: -9999px;
-  width: 1000px;
-  height: 1000px;
-  background: url(../../SVG/sprite.svg);
-  background-size: 1000px 1000px;
-}
-
-#defs-svg-css-background {
-  display: block;
-  text-indent: -9999px;
-  width: 100px;
-  height: 82px;
-  background: url(../../includes/defs.svg#tv) no-repeat;
-  background-size: 100px 82px;
-}
-
-.link, .plus, .download, .scissors, .a-block {
-    background: url(/sites/all/themes/custom/subtheme/SVG/sprite.svg);
-}
-
-.link {
-    width: 18px;
-    height: 9px;
-    background-size: 168px 144px;
-    background-position: -13px -6px;
-}
-.plus {
-    width: 12px;
-    height: 13px;
-    background-size: 168px 144px;
-    background-position: -37px -4px;
-}
-
-.download {
-    width: 17px;
-    height: 16px;
-    background-size: 168px 144px;
-    background-position: -55px -2px;
-}
-.scissors {
-    width: 18px;
-    height: 18px;
-    background-size: 168px 144px;
-    background-position: -75px -1px;
-}
-.a-block {
-    width: 19px;
-    height: 18px;
-    background-size: 168px 144px;
-    background-position: -95px -1px;
-}
-
-/*IE fallback test*/
-
-.briefcase {
-    background:
-      url(../../../../../../../sites/all/themes/custom/subtheme/SVG/sprite.svg);
-    width: 175px;
-    height: 168px;
-    background-size: 1468px 1474px;
-    background-position: -1066px -28px;
-}
-
-@font-face {
-	font-weight: normal;
-	font-style: normal;
-	font-family: 'feathericons';
-	src:url('../fonts/feathericons/feathericons.eot?-8is7zf');
-	src:url('../fonts/feathericons/feathericons.eot?#iefix-8is7zf') format('embedded-opentype'),
-		url('../fonts/feathericons/feathericons.woff?-8is7zf') format('woff'),
-		url('../fonts/feathericons/feathericons.ttf?-8is7zf') format('truetype'),
-		url('../fonts/feathericons/feathericons.svg?-8is7zf#feathericons') format('svg');
-}
-
-.grid {
+.hover-grid {
 	/* position: relative; */
 	/* margin: 0 auto; */
 	/* padding: 1em 0 4em; */
@@ -240,7 +9,7 @@ pre {
 }
 
 /* Common style */
-.grid figure {
+.hover-grid figure {
 	position: relative;
 	float: left;
 	overflow: hidden;
@@ -254,7 +23,7 @@ pre {
 	/* cursor: pointer; */
 }
 
-.grid figure img {
+.hover-grid figure img {
 	position: relative;
 	display: block;
 	min-height: 100%;
@@ -262,7 +31,7 @@ pre {
 	opacity: 0.8;
 }
 
-.grid figure figcaption {
+.hover-grid figure figcaption {
 	padding: 2em;
 	color: #fff;
 	text-transform: uppercase;
@@ -271,13 +40,13 @@ pre {
 	backface-visibility: hidden;
 }
 
-.grid figure figcaption::before,
-.grid figure figcaption::after {
+.hover-grid figure figcaption::before,
+.hover-grid figure figcaption::after {
 	pointer-events: none;
 }
 
-.grid figure figcaption,
-.grid figure figcaption > a {
+.hover-grid figure figcaption,
+.hover-grid figure figcaption > a {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -287,7 +56,7 @@ pre {
 
 /* Anchor will cover the whole item by default */
 /* For some effects it will show as a button */
-.grid figure figcaption > a {
+.hover-grid figure figcaption > a {
 	z-index: 1000;
 	text-indent: 200%;
 	white-space: nowrap;
@@ -295,21 +64,21 @@ pre {
 	opacity: 0;
 }
 
-.grid figure h2 {
+.hover-grid figure h2 {
 	word-spacing: -0.15em;
 	font-weight: 300;
 }
 
-.grid figure h2 span {
+.hover-grid figure h2 span {
 	font-weight: 800;
 }
 
-.grid figure h2,
-.grid figure p {
+.hover-grid figure h2,
+.hover-grid figure p {
 	margin: 0;
 }
 
-.grid figure p {
+.hover-grid figure p {
 	letter-spacing: 1px;
 	font-size: 68.5%;
 }
@@ -1369,7 +1138,7 @@ figure.effect-chico:hover p {
 		padding: 0 10px;
 		text-align: center;
 	}
-	.grid figure {
+	.hover-grid figure {
 		display: inline-block;
 		float: none;
 		margin: 10px auto;
@@ -1383,9 +1152,7 @@ figure {
 	margin: 0
 }
 
-.field .field-label, h2, h3, h4, h5, h6, label {
-	font-family: "Source Sans Pro", Helvetica, Arial, "Nimbus Sans L", sans-serif
-}
+
 a {
 	color: #326cb1;
 	text-decoration: none
@@ -1394,4 +1161,8 @@ a {
 
 * {
 	box-sizing: border-box
+}
+
+.field-name-field-featured-image img {
+	margin: 0 !important;
 }
