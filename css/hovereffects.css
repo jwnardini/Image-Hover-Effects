@@ -9,7 +9,7 @@
 		url('../fonts/feathericons/feathericons.svg?-8is7zf#feathericons') format('svg');
 }
 
-.grid-hover {
+.grid {
 	/* position: relative; */
 	/* margin: 0 auto; */
 	/* padding: 1em 0 4em; */
@@ -19,7 +19,7 @@
 }
 
 /* Common style */
-.grid-hover figure {
+.grid figure {
 	position: relative;
 	float: left;
 	overflow: hidden;
@@ -33,7 +33,7 @@
 	/* cursor: pointer; */
 }
 
-.grid-hover figure img {
+.grid figure img {
 	position: relative;
 	display: block;
 	min-height: 100%;
@@ -41,7 +41,7 @@
 	opacity: 0.8;
 }
 
-.grid-hover figure figcaption {
+.grid figure figcaption {
 	padding: 2em;
 	color: #fff;
 	text-transform: uppercase;
@@ -50,13 +50,13 @@
 	backface-visibility: hidden;
 }
 
-.grid-hover figure figcaption::before,
-.grid-hover figure figcaption::after {
+.grid figure figcaption::before,
+.grid figure figcaption::after {
 	pointer-events: none;
 }
 
-.grid-hover figure figcaption,
-.grid-hover figure figcaption > a {
+.grid figure figcaption,
+.grid figure figcaption > a {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -66,7 +66,7 @@
 
 /* Anchor will cover the whole item by default */
 /* For some effects it will show as a button */
-.grid-hover figure figcaption > a {
+.grid figure figcaption > a {
 	z-index: 1000;
 	text-indent: 200%;
 	white-space: nowrap;
@@ -74,21 +74,21 @@
 	opacity: 0;
 }
 
-.grid-hover figure h2 {
+.grid figure h2 {
 	word-spacing: -0.15em;
 	font-weight: 300;
 }
 
-.grid-hover figure h2 span {
+.grid figure h2 span {
 	font-weight: 800;
 }
 
-.grid-hover figure h2,
-.grid-hover figure p {
+.grid figure h2,
+.grid figure p {
 	margin: 0;
 }
 
-.grid-hover figure p {
+.grid figure p {
 	letter-spacing: 1px;
 	font-size: 68.5%;
 }
@@ -1148,7 +1148,7 @@ figure.effect-chico:hover p {
 		padding: 0 10px;
 		text-align: center;
 	}
-	.grid-hover figure {
+	.grid figure {
 		display: inline-block;
 		float: none;
 		margin: 10px auto;
