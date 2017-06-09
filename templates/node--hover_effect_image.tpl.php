@@ -87,6 +87,7 @@ $body = render($content['body']);
 $figureClass = $content['field_background_color']['#css_class'];
 $collectionImages = render($content['field_single_collection_image']);
 $imageTitleColor = $content['field_link_color']['#items'][0]['value'];
+$description = $content['field_description']['#items'][0]['value'];
 ?>
 
 <div class="hover-grid">
@@ -95,7 +96,8 @@ $imageTitleColor = $content['field_link_color']['#items'][0]['value'];
 	  <figcaption>
 	    <div>
 	      <h2 style="color:<?php echo $imageTitleColor ?>"> <?php print $title ?></h2>
-	      <p><?php print $collectionImages ?></p>
+	      	<p class="hover-image-links"><?php print $collectionImages ?></p>
+		<p class="hover-description"><?php print $description ?></p>
 	    </div>
 	  </figcaption>
 	</figure>
