@@ -157,6 +157,51 @@ function image_hover_effects_field_default_field_instances() {
   );
 
   // Exported field_instance:
+  // 'node-hover_effect_image-field_collection_image_margin'.
+  $field_instances['node-hover_effect_image-field_collection_image_margin'] = array(
+    'bundle' => 'hover_effect_image',
+    'default_value' => array(
+      0 => array(
+        'value' => '0px 0px 0px 0px',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 15,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_collection_image_margin',
+    'label' => 'Collection Image Margin',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 12,
+    ),
+  );
+
+  // Exported field_instance:
   // 'node-hover_effect_image-field_collection_image_width'.
   $field_instances['node-hover_effect_image-field_collection_image_width'] = array(
     'bundle' => 'hover_effect_image',
@@ -200,6 +245,48 @@ function image_hover_effects_field_default_field_instances() {
       'settings' => array(),
       'type' => 'number',
       'weight' => 7,
+    ),
+  );
+
+  // Exported field_instance: 'node-hover_effect_image-field_description'.
+  $field_instances['node-hover_effect_image-field_description'] = array(
+    'bundle' => 'hover_effect_image',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 14,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_description',
+    'label' => 'Description',
+    'required' => 0,
+    'settings' => array(
+      'display_summary' => 0,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 20,
+        'summary_rows' => 5,
+      ),
+      'type' => 'text_textarea_with_summary',
+      'weight' => 11,
     ),
   );
 
@@ -249,7 +336,7 @@ function image_hover_effects_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 8,
+      'weight' => 2,
     ),
   );
 
@@ -426,7 +513,7 @@ function image_hover_effects_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 11,
+      'weight' => 8,
     ),
   );
 
@@ -434,7 +521,9 @@ function image_hover_effects_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Collection Image Height');
   t('Collection Image Links');
+  t('Collection Image Margin');
   t('Collection Image Width');
+  t('Description');
   t('Featured Image');
   t('Figure Class');
   t('Link Color');
