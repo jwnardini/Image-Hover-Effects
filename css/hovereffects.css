@@ -962,7 +962,7 @@ figure.effect-dexter figcaption {
 figure.effect-dexter p.hover-image-links {
 	position: absolute;
 	right: 60px;
-	bottom: 160px;
+	bottom: 40%;
 	left: 60px;
 	opacity: 0;
 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
