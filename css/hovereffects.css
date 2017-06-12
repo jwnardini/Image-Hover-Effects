@@ -23,7 +23,7 @@
 	/* cursor: pointer; */
 }
 
-#hover-grid figure img {
+figure.effect-sadie img, figure.effect-roxy img, figure.effect-bubba img, figure.effect-romeo img, figure.effect-layla img, figure.effect-honey img, figure.effect-oscar img, figure.effect-marley img, figure.effect-ruby img, figure.effect-milo img, figure.effect-dexter img, figure.effect-sarah img, figure.effect-zoe img, figure.effect-chico img  {
 	position: relative;
 	display: block;
 	min-height: 100%;
@@ -89,7 +89,9 @@
 /*---------------*/
 
 figure.effect-lily img {
-	max-width: none;
+	height: auto;
+	float: left;
+	overflow: hidden;
 	width: -webkit-calc(100% + 50px);
 	width: calc(100% + 50px);
 	opacity: 0.7;
@@ -202,7 +204,7 @@ figure.effect-sadie p.hover-description {
 
 figure.effect-sadie p.hover-image-links {
 	position: absolute;
-	bottom: 30%;
+	bottom: 10%;
 	left: 0;
 	padding: 2em;
 	width: 100%;
