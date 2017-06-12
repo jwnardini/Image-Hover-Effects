@@ -15,7 +15,7 @@ function image_hover_effects_field_default_field_instances() {
     'bundle' => 'hover_effect_image',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'The hover effect you wish to use. Visit <a href="https://tympanus.net/Development/HoverEffectIdeas/" target="_blank">https://tympanus.net/Development/HoverEffectIdeas/</a> for examples.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -57,7 +57,7 @@ function image_hover_effects_field_default_field_instances() {
     'bundle' => 'hover_effect_image',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Height of Single Collection Image images',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -104,7 +104,7 @@ function image_hover_effects_field_default_field_instances() {
     'bundle' => 'hover_effect_image',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Links for Single Collection Image images. 1 to 1 relationship with Single Collection Images (1st link -> 1st Single Collection Image, 2nd link -> 2nd Single Collection Image, etc)',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -166,7 +166,9 @@ function image_hover_effects_field_default_field_instances() {
       ),
     ),
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Space between Single Collection Image images. Defaults to "0px 0px 0px 0px". <br>
+Key: "Top Right Bottom Left". <br>
+See <a href="https://www.w3schools.com/css/css_margin.asp" target="_blank">https://www.w3schools.com/css/css_margin.asp</a> for documentation.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -207,7 +209,7 @@ function image_hover_effects_field_default_field_instances() {
     'bundle' => 'hover_effect_image',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Width of Single Collection Image images',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -253,7 +255,7 @@ function image_hover_effects_field_default_field_instances() {
     'bundle' => 'hover_effect_image',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Optional description text',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -294,7 +296,7 @@ function image_hover_effects_field_default_field_instances() {
   $field_instances['node-hover_effect_image-field_featured_image'] = array(
     'bundle' => 'hover_effect_image',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'This is your main image',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -349,7 +351,7 @@ function image_hover_effects_field_default_field_instances() {
       ),
     ),
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Title text color.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -367,7 +369,7 @@ function image_hover_effects_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_link_color',
-    'label' => 'Link Color',
+    'label' => 'Title Color',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -393,7 +395,7 @@ function image_hover_effects_field_default_field_instances() {
       ),
     ),
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Optional target="_blank"',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -430,7 +432,7 @@ function image_hover_effects_field_default_field_instances() {
   $field_instances['node-hover_effect_image-field_single_collection_image'] = array(
     'bundle' => 'hover_effect_image',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Images for links you want hovering over the Main Image. 1 to 1 relationship with Collection Image Links',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -485,7 +487,7 @@ function image_hover_effects_field_default_field_instances() {
       ),
     ),
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Units for Single Collection Image widths and heights. Available options: px, em, %',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -526,10 +528,23 @@ function image_hover_effects_field_default_field_instances() {
   t('Description');
   t('Featured Image');
   t('Figure Class');
-  t('Link Color');
+  t('Height of Single Collection Image images');
+  t('Images for links you want hovering over the Main Image. 1 to 1 relationship with Collection Image Links');
+  t('Links for Single Collection Image images. 1 to 1 relationship with Single Collection Images (1st link -> 1st Single Collection Image, 2nd link -> 2nd Single Collection Image, etc)');
   t('Open sublinks in new tab?');
+  t('Optional description text');
+  t('Optional target="_blank"');
   t('Single Collection Image');
+  t('Space between Single Collection Image images. Defaults to "0px 0px 0px 0px". <br>
+Key: "Top Right Bottom Left". <br>
+See <a href="https://www.w3schools.com/css/css_margin.asp" target="_blank">https://www.w3schools.com/css/css_margin.asp</a> for documentation.');
+  t('The hover effect you wish to use. Visit <a href="https://tympanus.net/Development/HoverEffectIdeas/" target="_blank">https://tympanus.net/Development/HoverEffectIdeas/</a> for examples.');
+  t('This is your main image');
+  t('Title Color');
+  t('Title text color.');
   t('Units');
+  t('Units for Single Collection Image widths and heights. Available options: px, em, %');
+  t('Width of Single Collection Image images');
 
   return $field_instances;
 }
