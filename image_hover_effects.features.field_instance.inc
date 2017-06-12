@@ -199,7 +199,7 @@ See <a href="https://www.w3schools.com/css/css_margin.asp" target="_blank">https
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 12,
+      'weight' => 8,
     ),
   );
 
@@ -288,7 +288,47 @@ See <a href="https://www.w3schools.com/css/css_margin.asp" target="_blank">https
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 11,
+      'weight' => 13,
+    ),
+  );
+
+  // Exported field_instance: 'node-hover_effect_image-field_description_color'.
+  $field_instances['node-hover_effect_image-field_description_color'] = array(
+    'bundle' => 'hover_effect_image',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Font color of description',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 17,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_description_color',
+    'label' => 'Description Color',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 14,
     ),
   );
 
@@ -382,7 +422,7 @@ See <a href="https://www.w3schools.com/css/css_margin.asp" target="_blank">https
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 9,
+      'weight' => 10,
     ),
   );
 
@@ -423,7 +463,7 @@ See <a href="https://www.w3schools.com/css/css_margin.asp" target="_blank">https
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 10,
+      'weight' => 12,
     ),
   );
 
@@ -478,6 +518,50 @@ See <a href="https://www.w3schools.com/css/css_margin.asp" target="_blank">https
     ),
   );
 
+  // Exported field_instance: 'node-hover_effect_image-field_title_margin'.
+  $field_instances['node-hover_effect_image-field_title_margin'] = array(
+    'bundle' => 'hover_effect_image',
+    'default_value' => array(
+      0 => array(
+        'value' => '0px 0px 0px 0px',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'Optional margin on title. Defaults to 0px 0px 0px 0px. See <a href="https://www.w3schools.com/css/css_margin.asp" target="_blank">https://www.w3schools.com/css/css_margin.asp</a> for documentation.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 16,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_title_margin',
+    'label' => 'Title Margin',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 11,
+    ),
+  );
+
   // Exported field_instance: 'node-hover_effect_image-field_units'.
   $field_instances['node-hover_effect_image-field_units'] = array(
     'bundle' => 'hover_effect_image',
@@ -515,7 +599,7 @@ See <a href="https://www.w3schools.com/css/css_margin.asp" target="_blank">https
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 8,
+      'weight' => 9,
     ),
   );
 
@@ -526,13 +610,16 @@ See <a href="https://www.w3schools.com/css/css_margin.asp" target="_blank">https
   t('Collection Image Margin');
   t('Collection Image Width');
   t('Description');
+  t('Description Color');
   t('Featured Image');
   t('Figure Class');
+  t('Font color of description');
   t('Height of Single Collection Image images');
   t('Images for links you want hovering over the Main Image. 1 to 1 relationship with Collection Image Links');
   t('Links for Single Collection Image images. 1 to 1 relationship with Single Collection Images (1st link -> 1st Single Collection Image, 2nd link -> 2nd Single Collection Image, etc)');
   t('Open sublinks in new tab?');
   t('Optional description text');
+  t('Optional margin on title. Defaults to 0px 0px 0px 0px. See <a href="https://www.w3schools.com/css/css_margin.asp" target="_blank">https://www.w3schools.com/css/css_margin.asp</a> for documentation.');
   t('Optional target="_blank"');
   t('Single Collection Image');
   t('Space between Single Collection Image images. Defaults to "0px 0px 0px 0px". <br>
@@ -541,6 +628,7 @@ See <a href="https://www.w3schools.com/css/css_margin.asp" target="_blank">https
   t('The hover effect you wish to use. Visit <a href="https://tympanus.net/Development/HoverEffectIdeas/" target="_blank">https://tympanus.net/Development/HoverEffectIdeas/</a> for examples.');
   t('This is your main image');
   t('Title Color');
+  t('Title Margin');
   t('Title text color.');
   t('Units');
   t('Units for Single Collection Image widths and heights. Available options: px, em, %');
