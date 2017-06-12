@@ -1,5 +1,5 @@
 
-.hover-grid {
+#hover-grid {
 	/* position: relative; */
 	/* margin: 0 auto; */
 	/* padding: 1em 0 4em; */
@@ -9,7 +9,7 @@
 }
 
 /* Common style */
-.hover-grid figure {
+#hover-grid figure {
 	position: relative;
 	float: left;
 	overflow: hidden;
@@ -23,7 +23,7 @@
 	/* cursor: pointer; */
 }
 
-.hover-grid figure img {
+#hover-grid figure img {
 	position: relative;
 	display: block;
 	min-height: 100%;
@@ -31,7 +31,7 @@
 	opacity: 0.8;
 }
 
-.hover-grid figure figcaption {
+#hover-grid figure figcaption {
 	padding: 2em;
 	color: #fff;
 	text-transform: uppercase;
@@ -40,13 +40,13 @@
 	backface-visibility: hidden;
 }
 
-.hover-grid figure figcaption::before,
-.hover-grid figure figcaption::after {
+#hover-grid figure figcaption::before,
+#hover-grid figure figcaption::after {
 	pointer-events: none;
 }
 
-.hover-grid figure figcaption,
-.hover-grid figure figcaption > a {
+#hover-grid figure figcaption,
+#hover-grid figure figcaption > a {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -56,7 +56,7 @@
 
 /* Anchor will cover the whole item by default */
 /* For some effects it will show as a button */
-.hover-grid figure figcaption > a {
+#hover-grid figure figcaption > a {
 	z-index: 1000;
 	text-indent: 200%;
 	white-space: nowrap;
@@ -64,21 +64,20 @@
 	opacity: 0;
 }
 
-.hover-grid figure h2 {
-	word-spacing: -0.15em;
+#hover-grid figure h2 {
 	font-weight: 300;
 }
 
-.hover-grid figure h2 span {
+#hover-grid figure h2 span {
 	font-weight: 800;
 }
 
-.hover-grid figure h2,
-.hover-grid figure p {
+#hover-grid figure h2,
+#hover-grid figure p {
 	margin: 0;
 }
 
-.hover-grid figure p {
+#hover-grid figure p {
 	letter-spacing: 1px;
 	font-size: 68.5%;
 }
@@ -289,6 +288,10 @@ figure.effect-roxy:hover p {
 	transform: translate3d(0,0,0);
 }
 
+figure.effect-roxy p.hover-description {
+	float: left;
+}
+
 /*---------------*/
 /***** Bubba *****/
 /*---------------*/
@@ -365,6 +368,12 @@ figure.effect-bubba:hover p {
 	transform: translate3d(0,0,0);
 }
 
+figure.effect-bubba p.hover-description {
+	float: left;
+}
+
+
+
 /*---------------*/
 /***** Romeo *****/
 /*---------------*/
@@ -414,16 +423,6 @@ figure.effect-romeo:hover figcaption::after {
 	transform: translate3d(-50%,-50%,0) rotate(-45deg);
 }
 
-figure.effect-romeo h2,
-figure.effect-romeo p {
-	position: absolute;
-	top: 50%;
-	left: 0;
-	width: 100%;
-	-webkit-transition: -webkit-transform 0.35s;
-	transition: transform 0.35s;
-}
-
 figure.effect-romeo h2 {
 	-webkit-transform: translate3d(0,-50%,0) translate3d(0,-150%,0);
 	transform: translate3d(0,-50%,0) translate3d(0,-150%,0);
@@ -444,6 +443,34 @@ figure.effect-romeo:hover p {
 	-webkit-transform: translate3d(0,-50%,0) translate3d(0,100%,0);
 	transform: translate3d(0,-50%,0) translate3d(0,100%,0);
 }
+
+figure.effect-romeo h2 {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 100%;
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+}
+
+figure.effect-romeo p.hover-description {
+	position: absolute;
+	top: 60%;
+	left: 0;
+	width: 100%;
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+}
+
+figure.effect-romeo p.hover-image-links {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 100%;
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+}
+
 
 /*---------------*/
 /***** Layla *****/
@@ -548,6 +575,14 @@ figure.effect-layla:hover p,
 figure.effect-layla:hover img {
 	-webkit-transition-delay: 0.15s;
 	transition-delay: 0.15s;
+}
+
+figure.effect-layla .field-name-field-featured-image img {
+	height: 100%;
+}
+
+figure.effect-layla p.hover-description {
+	float: left;
 }
 
 /*---------------*/
@@ -683,6 +718,10 @@ figure.effect-oscar:hover img {
 	opacity: 0.4;
 }
 
+figure.effect-oscar p.hover-description {
+	float: left;
+}
+
 /*---------------*/
 /***** Marley *****/
 /*---------------*/
@@ -781,7 +820,18 @@ figure.effect-ruby h2 {
 	transform: translate3d(0,20px,0);
 }
 
-figure.effect-ruby p {
+figure.effect-ruby p.hover-image-links {
+	margin: 1em 0 0;
+	padding: 3em;
+	border: 1px solid #fff;
+	opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(0,20px,0) scale(1.1);
+	transform: translate3d(0,20px,0) scale(1.1);
+}
+
+figure.effect-ruby p.hover-description {
 	margin: 1em 0 0;
 	padding: 3em;
 	border: 1px solid #fff;
@@ -802,6 +852,13 @@ figure.effect-ruby:hover p {
 	-webkit-transform: translate3d(0,0,0) scale(1);
 	transform: translate3d(0,0,0) scale(1);
 }
+
+figure.effect-ruby p.hover-image-links {
+	display: flex;
+	justify-content: space-between;
+}
+
+
 
 /*---------------*/
 /***** Milo *****/
@@ -855,6 +912,10 @@ figure.effect-milo:hover p {
 	transform: translate3d(0,0,0);
 }
 
+figure.effect-milo p.hover-description {
+	float: left;
+}
+
 /*---------------*/
 /***** Dexter *****/
 /*---------------*/
@@ -898,7 +959,19 @@ figure.effect-dexter figcaption {
 	text-align: left;
 }
 
-figure.effect-dexter p {
+figure.effect-dexter p.hover-image-links {
+	position: absolute;
+	right: 60px;
+	bottom: 160px;
+	left: 60px;
+	opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(0,-100px,0);
+	transform: translate3d(0,-100px,0);
+}
+
+figure.effect-dexter p.hover-description {
 	position: absolute;
 	right: 60px;
 	bottom: 60px;
@@ -915,6 +988,8 @@ figure.effect-dexter:hover p {
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
 }
+
+
 
 /*---------------*/
 /***** Sarah *****/
@@ -984,6 +1059,10 @@ figure.effect-sarah:hover p {
 	opacity: 1;
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
+}
+
+figure.effect-sarah p.hover-description {
+	float: left;
 }
 
 /*---------------*/
@@ -1095,6 +1174,13 @@ figure.effect-zoe:hover p.icon-links a:first-child {
 	transition-delay: 0.2s;
 }
 
+figure.effect-zoe:hover p.hover-description {
+	float: left;
+}
+figure.effect-zoe:hover p.hover-image-links {
+	float: left;
+}
+
 /*---------------*/
 /***** Chico *****/
 /*---------------*/
@@ -1141,7 +1227,7 @@ figure.effect-chico h2 {
 
 figure.effect-chico p {
 	margin: 0 auto;
-	max-width: 200px;
+	max-width: 100%;
 	-webkit-transform: scale(1.5);
 	transform: scale(1.5);
 }
@@ -1153,12 +1239,16 @@ figure.effect-chico:hover p {
 	transform: scale(1);
 }
 
+figure.effect-chico p.hover-description {
+  float: left;
+}
+
 @media screen and (max-width: 50em) {
 	.content {
 		padding: 0 10px;
 		text-align: center;
 	}
-	.hover-grid figure {
+	#hover-grid figure {
 		display: inline-block;
 		float: none;
 		margin: 10px auto;
@@ -1179,7 +1269,7 @@ a {
 }
 
 
-* {
+#hover-grid * {
 	box-sizing: border-box;
 }
 
