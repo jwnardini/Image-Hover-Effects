@@ -82,14 +82,15 @@
 ?>
 
 <?php
+
 $mainImage = render($content['field_featured_image']);
 $body = render($content['body']);
-$figureClass = $content['field_background_color']['#css_class'];
+$figureClass = render($content['field_background_color']['#css_class']);
 $collectionImages = render($content['field_single_collection_image']);
-$imageTitleColor = $content['field_link_color']['#items'][0]['value'];
-$titleMargin = $content['field_title_margin']['#items'][0]['value'];
-$description = $content['field_description']['#items'][0]['value'];
-$descriptionColor = $content['field_description_color']['#items'][0]['value'];
+$imageTitleColor = render($content['field_link_color']['#items'][0]['value']);
+$titleMargin = render($content['field_title_margin']['#items'][0]['value']);
+$description = render($content['field_description']['#items'][0]['value']);
+$descriptionColor = render($content['field_description_color']['#items'][0]['value']);
 ?>
 
 <div id="hover-container">
