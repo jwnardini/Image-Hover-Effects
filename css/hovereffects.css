@@ -651,6 +651,18 @@ figure.effect-honey:hover h2 i {
 	transform: translate3d(0,0,0);
 }
 
+figure.effect-honey p {
+	opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+}
+
+figure.effect-honey:hover p {
+	opacity: 1;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+}
+
 /*---------------*/
 /***** Oscar *****/
 /*---------------*/
@@ -1260,12 +1272,12 @@ figure.effect-chico p.hover-description {
 
 
 
-figure {
+#hover-grid figure {
 	margin: 0;
 }
 
 
-a {
+#hover-grid a {
 	color: #326cb1;
 	text-decoration: none;
 }
@@ -1275,12 +1287,12 @@ a {
 	box-sizing: border-box;
 }
 
-.field-name-field-featured-image img {
+#hover-grid .field-name-field-featured-image img {
 	margin: 0 !important;
 }
 
 
-figcaption img {
+#hover-grid figcaption img {
 	opacity: 1 !important;
 	float: left;
 	display: block;
